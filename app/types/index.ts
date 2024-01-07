@@ -1,7 +1,7 @@
 export interface MenuItems {
-    href: {
-        href: string;
-        icon: React.JSX.Element;
-        label: string;
-    }
+  href: {
+    href: string;
+    icon: React.JSX.Element;
+    label: string;
+  };
 }

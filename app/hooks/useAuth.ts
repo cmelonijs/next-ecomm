@@ -1,7 +1,7 @@
 interface Auth {
-    loading: boolean;
-    loggedIn: boolean;
-    isAdmin: boolean;
+  loading: boolean;
+  loggedIn: boolean;
+  isAdmin: boolean;
 }
 
 const useAuth: () => Auth = () => {
@@ -9,7 +9,7 @@ const useAuth: () => Auth = () => {
     loading: false,
     loggedIn: false,
     isAdmin: false,
-  }
-}
+  };
+};
 
 export default useAuth;

@@ -1,16 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const ContactLayout = ({
-    children,
-  }: {
-    children: React.ReactNode
-  }) => {
+const ContactLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-        <div>ContactLayout</div>
-        {children}
+      <div>ContactLayout</div>
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default ContactLayout
+export default ContactLayout;
