@@ -36,9 +36,9 @@ export default function SignUp() {
       password: "",
     },
     validationSchema,
-    onSubmit: (values) => {
-      // console.log("values", values);
-      fetch("/api/users", {
+    onSubmit: async (values, action) => {
+      action.setSubmitting(true);
+      await fetch("/api/users", {
         method: "POST",
         body: JSON.stringify(values),
       }).then(async (res) => {
@@ -46,6 +46,7 @@ export default function SignUp() {
           const result = await res.json();
           console.log("risultato??", result);
         }
+        action.setSubmitting(false);
       });
     },
   });
@@ -81,7 +82,7 @@ export default function SignUp() {
         value={password}
         crossOrigin={undefined}
       />
-      <Button type="submit" className="w-full">
+      <Button disabled={isSubmitting} type="submit" className="w-full">
         Sign up
       </Button>
       <div className="">
