@@ -5,3 +5,5 @@ export interface MenuItems {
     label: string;
   };
 }
+
+export interface NewUserRequest {name: string, email: string, password: string};
