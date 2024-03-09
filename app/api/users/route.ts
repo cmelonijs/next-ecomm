@@ -4,10 +4,11 @@ import { NextResponse } from "next/server";
 import { NewUserRequest } from "@/app/types";
 
 export const POST = async (req: Request) => {
-  const body = await req.json() as NewUserRequest
+  const body = (await req.json()) as NewUserRequest;
   await startDb();
   const newUser = await UserModel.create({
-    ...body
-  })
+    ...body,
+  });
+
   return NextResponse.json(newUser);
 };
